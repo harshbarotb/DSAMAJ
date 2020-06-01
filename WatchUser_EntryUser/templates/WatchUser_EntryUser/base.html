@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+{% load static from static %}
+<!--[if IE 9 ]>
+<html lang="en-US" class="ie9 loading-site no-js"> <![endif]-->
+<!--[if IE 8 ]>
+<html lang="en-US" class="ie8 loading-site no-js"> <![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en-US"
+      class="loading-site js wf-opensans-n4-active wf-comfortaa-n4-active wf-comfortaa-n7-active wf-lora-n4-active wf-active">
+<head>
+    <meta charset="UTF-8"/>
+    <link href="{% static 'WatchUser_EntryUser/select2.min.css' %}" rel="stylesheet" media="all">
+    <link href="{% static 'WatchUser_EntryUser/daterangepicker.css' %}" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="{% static 'WatchUser_EntryUser/bootstrap.min.css' %}">
+    <!-- Main CSS-->
+    <link href="{% static 'WatchUser_EntryUser/main.css' %}" rel="stylesheet" media="all">
+    <link href="{% static 'WatchUser_EntryUser/material-design-iconic-font.min.css' %}" rel="stylesheet" media="all">
+    <link href="{% static 'WatchUser_EntryUser/font-awesome.min.css' %}" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="{% static 'WatchUser_EntryUser/select2.min.css' %}" rel="stylesheet" media="all">
+    <link href="{% static 'WatchUser_EntryUser/daterangepicker.css' %}" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="{% static 'WatchUser_EntryUser/bootstrap.min.css' %}">
+    <!-- Main CSS-->
+    <link href="{% static 'WatchUser_EntryUser/main.css' %}" rel="stylesheet" media="all">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>WWW.DOSHISAMAJ.COM &#8211;</title>
+    <link rel='stylesheet' id='wp-block-library-css' href="{% static 'ContactUs/style.min.css'%}" type='text/css'
+          media='all'/>
+    <link rel='stylesheet' id='GCTLP-timeline-styles-css-css' href="{% static 'ContactUs/blocks.style.build.css' %}"
+          type='text/css' media='all'/>
+    <link rel='stylesheet' id='contact-form-7-css' href="{% static 'ContactUs/styles.css' type='text/css' %}"
+          media='all'/>
+    <link rel='stylesheet' id='flatsome-main-css' href="{% static 'ContactUs/flatsome.css' type='text/css' %}"
+          media='all'/>
+    <link rel='stylesheet' id='flatsome-style-css' href="{% static 'ContactUs/style.css' type='text/css' %}"
+          media='all'/>
+    <script type='text/javascript' src="{% static 'ContactUs/jquery.js'%}"></script>
+    <script type='text/javascript' src="{% static 'ContactUs/jquery-migrate.min.js'%}"></script>
+    <style type="text/css">
+                    .ctl-bullets-container {
+                display: block;
+                position: fixed;
+                right: 0;
+                height: 100%;
+                z-index: 1049;
+                font-weight: normal;
+                height: 70vh;
+                overflow-x: hidden;
+                overflow-y: auto;
+                margin: 15vh auto;
+            }
+    </style>
+    <style>.bg{opacity: 0; transition: opacity 1s; -webkit-transition: opacity 1s;} .bg-loaded{opacity: 1;}</style>
+    <!--[if IE]><link rel="stylesheet" type="text/css" href="http://www.jainology.org/wp-content/themes/flatsome/assets/css/ie-fallback.css"><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"></script><script>var head = document.getElementsByTagName('head')[0],style = document.createElement('style');style.type = 'text/css';style.styleSheet.cssText = ':before,:after{content:none !important';head.appendChild(style);setTimeout(function(){head.removeChild(style);}, 0);</script><script src="http://www.jainology.org/wp-content/themes/flatsome/assets/libs/ie-flexibility.js"></script><![endif]-->
+    <script type="text/javascript">
+    WebFontConfig = {
+      google: { families: [ "Comfortaa:regular,700","Open+Sans:regular,regular","Open+Sans:regular,regular","Lora:regular,regular", ] }
+    };
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = "{% static 'HomePage/webfont.js' %}";
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+    })();
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-63831324-16"></script>
+    <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-63831324-16');
+    </script>
+    <style id="custom-css" type="text/css">
+        :root {--primary-color: #111;}/* Site Width */.full-width .ubermenu-nav, .container, .row{max-width: 1258px}.row.row-collapse{max-width: 1228px}.row.row-small{max-width: 1250.5px}.row.row-large{max-width: 1288px}.header-main{height: 91px}#logo img{max-height: 91px}#logo{width:182px;}.header-bottom{min-height: 43px}.header-top{min-height: 29px}.transparent .header-main{height: 30px}.transparent #logo img{max-height: 30px}.has-transparent + .page-title:first-of-type,.has-transparent + #main > .page-title,.has-transparent + #main > div > .page-title,.has-transparent + #main .page-header-wrapper:first-of-type .page-title{padding-top: 110px;}.header.show-on-scroll,.stuck .header-main{height:70px!important}.stuck #logo img{max-height: 70px!important}.header-bg-color, .header-wrapper {background-color: rgba(255,255,255,0.9)}.header-bottom {background-color: #d26e4b}.stuck .header-main .nav > li > a{line-height: 50px }.header-bottom-nav > li > a{line-height: 16px }@media (max-width: 549px) {.header-main{height: 79px}#logo img{max-height: 79px}}.nav-dropdown-has-arrow li.has-dropdown:before{border-bottom-color: #e02f30;}.nav .nav-dropdown{border-color: #e02f30 }.nav-dropdown{font-size:100%}.nav-dropdown-has-arrow li.has-dropdown:after{border-bottom-color: #ffffff;}.nav .nav-dropdown{background-color: #ffffff}/* Color */.accordion-title.active, .has-icon-bg .icon .icon-inner,.logo a, .primary.is-underline, .primary.is-link, .badge-outline .badge-inner, .nav-outline > li.active> a,.nav-outline >li.active > a, .cart-icon strong,[data-color='primary'], .is-outline.primary{color: #e02f30;}/* Color !important */[data-text-color="primary"]{color: #e02f30!important;}/* Background */.scroll-to-bullets a,.featured-title, .label-new.menu-item > a:after, .nav-pagination > li > .current,.nav-pagination > li > span:hover,.nav-pagination > li > a:hover,.has-hover:hover .badge-outline .badge-inner,button[type="submit"], .button.wc-forward:not(.checkout):not(.checkout-button), .button.submit-button, .button.primary:not(.is-outline),.featured-table .title,.is-outline:hover, .has-icon:hover .icon-label,.nav-dropdown-bold .nav-column li > a:hover, .nav-dropdown.nav-dropdown-bold > li > a:hover, .nav-dropdown-bold.dark .nav-column li > a:hover, .nav-dropdown.nav-dropdown-bold.dark > li > a:hover, .is-outline:hover, .tagcloud a:hover,.grid-tools a, input[type='submit']:not(.is-form), .box-badge:hover .box-text, input.button.alt,.nav-box > li > a:hover,.nav-box > li.active > a,.nav-pills > li.active > a ,.current-dropdown .cart-icon strong, .cart-icon:hover strong, .nav-line-bottom > li > a:before, .nav-line-grow > li > a:before, .nav-line > li > a:before,.banner, .header-top, .slider-nav-circle .flickity-prev-next-button:hover svg, .slider-nav-circle .flickity-prev-next-button:hover .arrow, .primary.is-outline:hover, .button.primary:not(.is-outline), input[type='submit'].primary, input[type='submit'].primary, input[type='reset'].button, input[type='button'].primary, .badge-inner{background-color: #111;}/* Border */.nav-vertical.nav-tabs > li.active > a,.scroll-to-bullets a.active,.nav-pagination > li > .current,.nav-pagination > li > span:hover,.nav-pagination > li > a:hover,.has-hover:hover .badge-outline .badge-inner,.accordion-title.active,.featured-table,.is-outline:hover, .tagcloud a:hover,blockquote, .has-border, .cart-icon strong:after,.cart-icon strong,.blockUI:before, .processing:before,.loading-spin, .slider-nav-circle .flickity-prev-next-button:hover svg, .slider-nav-circle .flickity-prev-next-button:hover .arrow, .primary.is-outline:hover{border-color: #e02f30}.nav-tabs > li.active > a{border-top-color: #e02f30}.widget_shopping_cart_content .blockUI.blockOverlay:before { border-left-color: #e02f30 }.woocommerce-checkout-review-order .blockUI.blockOverlay:before { border-left-color: #e02f30 }/* Fill */.slider .flickity-prev-next-button:hover svg,.slider .flickity-prev-next-button:hover .arrow{fill: #e02f30;}/* Background Color */[data-icon-label]:after, .secondary.is-underline:hover,.secondary.is-outline:hover,.icon-label,.button.secondary:not(.is-outline),.button.alt:not(.is-outline), .badge-inner.on-sale, .button.checkout, .single_add_to_cart_button{ background-color:#e0852f; }/* Color */.secondary.is-underline,.secondary.is-link, .secondary.is-outline,.stars a.active, .star-rating:before, .woocommerce-page .star-rating:before,.star-rating span:before, .color-secondary{color: #e0852f}/* Color !important */[data-text-color="secondary"]{color: #e0852f!important;}/* Border */.secondary.is-outline:hover{border-color:#e0852f}body{font-size: 100%;}@media screen and (max-width: 549px){body{font-size: 100%;}}body{font-family:"Open Sans", sans-serif}body{font-weight: 0}body{color: #333333}.nav > li > a {font-family:"Open Sans", sans-serif;}.nav > li > a {font-weight: 0;}h1,h2,h3,h4,h5,h6,.heading-font, .off-canvas-center .nav-sidebar.nav-vertical > li > a{font-family: "Comfortaa", sans-serif;}h1,h2,h3,h4,h5,h6,.heading-font,.banner h1,.banner h2{font-weight: 700;}h1,h2,h3,h4,h5,h6,.heading-font{color: #e02f30;}h3.widget-title,span.widget-title{text-transform: none;}.alt-font{font-family: "Lora", sans-serif;}.alt-font{font-weight: 0!important;}.header:not(.transparent) .header-bottom-nav.nav > li > a{color: #000000;}.header:not(.transparent) .header-bottom-nav.nav > li > a:hover,.header:not(.transparent) .header-bottom-nav.nav > li.active > a,.header:not(.transparent) .header-bottom-nav.nav > li.current > a,.header:not(.transparent) .header-bottom-nav.nav > li > a.active,.header:not(.transparent) .header-bottom-nav.nav > li > a.current{color: #e22f32;}.header-bottom-nav.nav-line-bottom > li > a:before,.header-bottom-nav.nav-line-grow > li > a:before,.header-bottom-nav.nav-line > li > a:before,.header-bottom-nav.nav-box > li > a:hover,.header-bottom-nav.nav-box > li.active > a,.header-bottom-nav.nav-pills > li > a:hover,.header-bottom-nav.nav-pills > li.active > a{color:#FFF!important;background-color: #e22f32;}a{color: #e02f30;}a:hover{color: #e0852f;}.tagcloud a:hover{border-color: #e0852f;background-color: #e0852f;}.widget a{color: #e02f30;}.widget a:hover{color: #e0852f;}.widget .tagcloud a:hover{border-color: #e0852f; background-color: #e0852f;}.is-divider{background-color: #e02f30;}.pswp__bg,.mfp-bg.mfp-ready{background-color: #ffffff}.footer-2{background-color: #efefef}/* Custom CSS *///.timelinesec {//max-height: 200px !important;//}.tooltipster-base{max-width:400px !important;background-color: white;color: #000000 !important;border-style: solid;border-width: 2px;border-color: #E02F30;}.jpbut1{tooltip: "Hello World";}.label-new.menu-item > a:after{content:"New";}.label-hot.menu-item > a:after{content:"Hot";}.label-sale.menu-item > a:after{content:"Sale";}.label-popular.menu-item > a:after{content:"Popular";}
+
+   </style>
+</head>
+
+<body class="home page-template page-template-page-blank page-template-page-blank-php page page-id-179 cooltimeline-body cool-timeline-page full-width header-shadow box-shadow lightbox lazy-icons">
+
+<a class="skip-link screen-reader-text" href="#main">Skip to content</a>
+
+<div id="wrapper">
+
+    <div class="page-loader fixed fill z-top-3 ">
+        <div class="page-loader-inner x50 y50 md-y50 md-x50 lg-y50 lg-x50 absolute">
+            <div class="page-loader-logo" style="padding-bottom: 30px;">
+                <!-- Header logo -->
+
+
+                <!--
+                ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                              LOGO PAGE LOADING TIME MA SPIN KARAVVA MATE NU CHE AA CODE
+                ========================================================================================================================================================================================================================================================================================================================
+                -->
+                <!--   spin logo ni link ahi thi mukashe
+                =============================================================================================================================================================================================
+                            -->
+
+                <a href=" " title=" " rel="home">
+                    <img width="182" height="91" src="{% static 'asset/Logo.png'%}" class="header_logo header-logo"
+                         alt="DOSHISAMAJ"/><img width="182" height="91"
+                                                            src="{% static 'asset/Logo.png'%}"
+                                                            class="header-logo-dark" alt="DOSHISAMAJ"/></a>
+            </div>
+            <div class="page-loader-spin">
+                <div class="loading-spin"></div>
+            </div>
+        </div>
+        <style scope="scope">
+		.page-loader{opacity: 0; transition: opacity .3s; transition-delay: .3s;
+			background-color: #fff;
+		}
+		.loading-site .page-loader{opacity: .98;}
+		.page-loader-logo{max-width: px; animation: pageLoadZoom 1.3s ease-out; -webkit-animation: pageLoadZoom 1.3s ease-out;}
+		.page-loader-spin{animation: pageLoadZoomSpin 1.3s ease-out;}
+		.page-loader-spin .loading-spin{width: 40px; height: 40px; }
+		@keyframes pageLoadZoom {
+		    0%   {opacity:0; transform: translateY(30px);}
+		    100% {opacity:1; transform: translateY(0);}
+		}
+		@keyframes pageLoadZoomSpin {
+		    0%   {opacity:0; transform: translateY(60px);}
+		    100% {opacity:1; transform: translateY(0);}
+		}
+        </style>
+    </div>
+    <!--
+    ========================================================================================================================================================================================================================================================================================================================
+    -->
+
+    <!--
+
+    =======================================================================================================================================HEADER MATE EDITING SIDE BAR MOBILE MATE PAN EDITING THASE AHIYA THI J==============================================================================================================================================================
+    -->
+
+    <header id="header" class="header has-sticky sticky-fade">
+        <div class="header-wrapper">
+            <div id="top-bar" class="header-top hide-for-sticky nav-dark">
+                <div class="flex-row container">
+                    <div class="flex-col hide-for-medium flex-left">
+                        <ul class="nav nav-left medium-nav-center nav-small  nav-divided">
+                            <li class="html custom html_topbar_left"><em class="uppercase">WWW.DOSHISAMAJ.COM</em></li>
+                        </ul>
+                    </div>
+                    <!-- flex-col left -->
+
+                    <div class="flex-col hide-for-medium flex-center">
+                        <ul class="nav nav-center nav-small  nav-divided">
+                        </ul>
+                    </div>
+                    <!-- center -->
+
+                    <div class="flex-col hide-for-medium flex-right">
+                        <ul class="nav top-bar-nav nav-right nav-small  nav-divided">
+                            <li id="menu-item-4724"
+                                class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-4724"><a
+                                    href="http://127.0.0.1:8000/MagazinePage/" class="nav-top-link">E-Magazine</a></li>
+                            <li id="menu-item-4725"
+                                class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-4725"><a
+                                    href="#" class="nav-top-link">Watch Community</a></li>
+                            <li id="menu-item-4726"
+                                class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-4726"><a
+                                    href="http://127.0.0.1:8000/ContactUs/" class="nav-top-link">Contact Us</a></li>
+                            <li id="menu-item-4870"
+                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  menu-item-4870 has-dropdown">
+                                <a href="http://127.0.0.1:8000" class="nav-top-link">HomePage</a>
+                            </li>
+                             <li id=""
+                                class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-4724"><a
+                                    href="http://127.0.0.1:8000/LogInPage/" class="nav-top-link">Family Registration</a></li>
+                                   <li
+                                    class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-4724"><a
+                                    href="http://127.0.0.1:8000/EventCoverPage/" class="nav-top-link">Gallery
+                                Section</a></li>
+                            <!--
+                            ========================================================================================================                               SOCIAL ICON MATE
+                            ========================================================================================================
+                            -->
+                            <li class="html header-social-icons ml-0">
+                                <div class="social-icons follow-icons ">
+
+                                    <a href="" target="_blank" data-label="Facebook" rel="noopener noreferrer nofollow"
+                                       class="icon plain facebook tooltip" title="Follow on Facebook"><i
+                                            class="icon-facebook"></i></a>
+
+                                    <a href=" " target="_blank" data-label="Twitter" rel="noopener noreferrer nofollow"
+                                       class="icon plain  twitter tooltip" title="Follow on Twitter"><i
+                                            class="icon-twitter"></i></a>
+
+                                    <a href="" data-label="E-mail" rel="nofollow" class="icon plain  email tooltip"
+                                       title="Send us an email"><i class="icon-envelop"></i></a>
+
+                                    <a href="tel:+91 8160496346" target="_blank" data-label="Phone"
+                                       rel="noopener noreferrer nofollow" class="icon plain  phone tooltip"
+                                       title="Call us"><i class="icon-phone"></i></a>
+
+
+                                    <a href="" target="_blank" rel="noopener noreferrer nofollow" data-label="LinkedIn"
+                                       class="icon plain  linkedin tooltip" title="Follow on LinkedIn"><i
+                                            class="icon-linkedin"></i></a></div>
+                            </li>
+                        </ul>
+                    </div><!-- .flex-col right -->
+
+                    <div class="flex-col show-for-medium flex-grow">
+                        <ul class="nav nav-center nav-small mobile-nav  nav-divided">
+                            <li class="html custom html_topbar_left"><em class="uppercase">WWW.DOSHISAMAJ.COM</em></li>
+                        </ul>
+                    </div>
+
+                </div><!-- .flex-row -->
+            </div>
+            <!--
+            ========================================================================================================
+                                    SOCIAL ICON NU AHIYA THI PURU
+            ========================================================================================================
+            -->
+
+            <!--
+            ========================================================================================================
+            HEADER MATE EDITING SIDE BAR MOBILE MATE PAN EDITING THASE AHIYA THI J PURU
+
+            ========================================================================================================
+            -->
+            <!-- #header-top -->
+            <div id="masthead" class="header-main ">
+                <div class="header-inner flex-row container logo-left medium-logo-center" role="navigation">
+
+                    <!-- Logo -->
+                    <div id="logo" class="flex-col logo">
+                        <!-- Header logo -->
+                        <a href="  " title="  " rel="home">
+                            <img width="182" height="91"
+                                 src="{% static 'asset/Logo.png'%}"
+                                 class="header_logo header-logo" alt="DOSHISAMAJ"/>
+                    </div>
+
+                    <!-- Mobile Left Elements -->
+                    <div class="flex-col show-for-medium flex-left">
+                        <ul class="mobile-nav nav nav-left ">
+                            <li class="nav-icon has-icon">
+                                <div class="header-button"><a href="#" data-open="#main-menu" data-pos="left"
+                                                              data-bg="main-menu-overlay" data-color=""
+                                                              class="icon primary button round is-small"
+                                                              aria-controls="main-menu" aria-expanded="false">
+
+                                    <i class="icon-menu"> </i>
+                                </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Left Elements -->
+                    <div class="flex-col hide-for-medium flex-left
+            flex-grow">
+                        <ul class="header-nav header-nav-main nav nav-left  nav-uppercase">
+                        </ul>
+                    </div>
+
+                    <!-- Right Elements -->
+                    <div class="flex-col hide-for-medium flex-right">
+                        <ul class="header-nav header-nav-main nav nav-right  nav-uppercase">
+                            <li class="html header-button-1">
+                                <div class="header-button">
+                                    <a href="http://127.0.0.1:8000/admin/"
+                                       class="button primary is-medium box-shadow-2-hover" style="border-radius:99px;">
+                                        <span>LOGIN FOR ADMIN</span>
+                                    </a>
+                                </div>
+                            </li>
+
+
+                        </ul>
+                    </div>
+
+                    <!-- Mobile Right Elements -->
+                    <div class="flex-col show-for-medium flex-right">
+                        <ul class="mobile-nav nav nav-right ">
+                        </ul>
+                    </div>
+
+                </div><!-- .header-inner -->
+
+                <!-- Header divider -->
+                <div class="container">
+                    <div class="top-divider full-width"></div>
+                </div>
+            </div><!-- .header-main -->
+            <div id="wide-nav" class="header-bottom wide-nav flex-has-center hide-for-medium">
+                <div class="flex-row container">
+
+
+                    <div class="flex-col hide-for-medium flex-center">
+                        <ul class="nav header-nav header-bottom-nav nav-center  nav-divided nav-size-medium">
+                            <li id="menu-item-4867"
+                                class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-4867"><a
+                                    href="" class="nav-top-link">OneJAIN</a></li>
+                            <li id="menu-item-304"
+                                class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-304"><a
+                                    href="" class="nav-top-link">Projects</a></li>
+                            <li id="menu-item-48"
+                                class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-48"><a
+                                    href="" class="nav-top-link">Education</a></li>
+                            <li id="menu-item-52"
+                                class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-52"><a
+                                    href="http://127.0.0.1:8000/ContactUs" class="nav-top-link">ContactUs</a></li>
+                            <li id="menu-item-53"
+                                class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-53"><a
+                                    href="" class="nav-top-link">Interfaith</a></li>
+                            <li id="menu-item-50"
+                                class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-50"><a
+                                    href="" class="nav-top-link">News</a></li>
+                            <li class="header-search header-search-dropdown has-icon has-dropdown menu-item-has-children">
+                                <!-- .flex-col -->
+                                <div class="flex-col">
+                                    <button type="submit"
+                                            class="ux-search-submit submit-button secondary button icon mb-0">
+                                        <i class="icon-search"></i></button>
+                                </div><!-- .flex-col -->
+                    </div><!-- .flex-row -->
+                    <div class="live-search-results text-left z-top"></div>
+                    </form>
+                </div>
+            </div>
+            </li>
+            </ul><!-- .nav-dropdown -->
+            </li>
+            </ul>
+        </div><!-- flex-col -->
+
+
+</div><!-- .flex-row -->
+</div><!-- .header-bottom -->
+
+
+</header>
+<!-- Template Inharitance from here -->
+
+{% block content %}
+
+{% endblock %}
+<!-- Here Template Inharitance Is Over -->
+
+<footer id="footer" class="footer-wrapper">
+
+
+    <!-- FOOTER 1 -->
+
+
+    <!-- FOOTER 2 -->
+    <div class="footer-widgets footer footer-2 " style="border-top:3px solid #f79733;">
+        <div class="row large-columns-3 mb-0">
+
+            <div id="block_widget-2" class="col pb-0 widget block_widget">
+                <span class="widget-title">Our Mission</span>
+                <div class="is-divider small"></div>
+                type your mission here to provide a information to your user
+
+                <!--
+                  -------------------------------------FOOTER SOCIAL ICON---------------------------------------
+                -->
+
+                <div class="social-icons follow-icons ">
+                    <a href="" target="_blank" data-label="Facebook" rel="noopener noreferrer nofollow"
+                       class="icon plain facebook tooltip" title="Follow on Facebook"><i class="icon-facebook"></i></a>
+
+                    <a href="" target="_blank" data-label="Twitter" rel="noopener noreferrer nofollow"
+                       class="icon plain  twitter tooltip" title="Follow on Twitter"><i class="icon-twitter"></i></a>
+
+                    <a href="" data-label="E-mail" rel="nofollow" class="icon plain  email tooltip"
+                       title="Send us an email"><i class="icon-envelop"></i></a>
+
+                    <a href="" target="_blank" rel="noopener noreferrer nofollow" data-label="LinkedIn"
+                       class="icon plain  linkedin tooltip" title="Follow on LinkedIn"><i class="icon-linkedin"></i></a>
+                </div>
+                <!--
+                --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------                              FOOTER MA LATEST NEWS ENTER KARAVA MATE
+                --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                -->
+
+            </div>
+
+        </div>
+
+    </div><!-- end row -->
+    </div><!-- end footer 2 -->
+
+
+    <div class="absolute-footer dark medium-text-center text-center" style="background-color: #d26e4b;">
+        <div class="container clearfix">
+
+
+            <div class="footer-primary pull-left">
+                <div class="menu-footer-menu-container">
+                    <ul id="menu-footer-menu" class="links footer-nav uppercase">
+                        <li id="menu-item-169"
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-169"><a href="">About
+                            IOJ</a></li>
+                        <li id="menu-item-168"
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-168"><a href="">Contact
+                            Us</a></li>
+                    </ul>
+                </div>
+                <div class="copyright-footer">
+                    Copyright 2020 © <strong>SAYONAWEBTECH</strong> | Site by SAYONAWEBTECH
+                </div>
+            </div><!-- .left -->
+        </div><!-- .container -->
+    </div><!-- .absolute-footer -->
+    <a href="#top" class="back-to-top button invert plain is-outline hide-for-medium icon circle fixed bottom z-1"
+       id="top-link"><i class="icon-angle-up"></i></a>
+
+</footer><!-- .footer-wrapper -->
+
+</div><!-- #wrapper -->
+<!--
+  ========================================================================================================================================================================================================
+                         MOBILE SIDEBAR MATE NU CODING
+  ========================================================================================================================================================================================================
+-->
+
+<!-- Mobile Sidebar -->
+<div id="main-menu" class="mobile-sidebar no-scrollbar mfp-hide">
+    <div class="sidebar-menu no-scrollbar ">
+        <ul class="nav nav-sidebar  nav-vertical nav-uppercase">
+            <li><a href="" class="nav-top-link">OneJAIN</a></li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304"><a href="" class="nav-top-link">OneJAIN</a>
+            </li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-48"><a href="" class="nav-top-link">OneJAIN</a>
+            </li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-52"><a href="" class="nav-top-link">OneJAIN</a>
+            </li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53"><a href="" class="nav-top-link">OneJAIN</a>
+            </li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-50"><a href="" class="nav-top-link">OneJAIN</a>
+            </li>
+            <li class="html header-button-1">
+                <div class="header-button">
+                    <a href="http://127.0.0.1:8000/admin/" class="button primary is-medium box-shadow-2-hover"
+                       style="border-radius:99px;">
+                        <span>LOGIN FOR ADMIN</span>
+                    </a>
+                </div>
+            </li>
+
+
+            <li class="html custom html_topbar_left"><em class="uppercase">WWW.DOSHISAMAJ.COM</em></li>
+        </ul>
+    </div><!-- inner -->
+</div><!-- #mobile-menu -->
+<script id="lazy-load-icons">
+    /* Lazy load icons css file */
+    var fl_icons = document.createElement('link');
+    fl_icons.rel = 'stylesheet';
+    fl_icons.href = "{%static 'ContactUs/fl-icons.css' %}";
+    fl_icons.type = 'text/css';
+    var fl_icons_insert = document.getElementsByTagName('link')[0];
+    fl_icons_insert.parentNode.insertBefore(fl_icons, fl_icons_insert);
+
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"http:\/\/www.jainology.org\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+
+</script>
+<link rel='stylesheet' id='ctl_flexslider_style-css' href="{%static 'ContactUs/flexslider.css'' %}" type='text/css'
+      media='all'/>
+<link rel='stylesheet' id='ctl_pp_css-css' href="{%static 'ContactUs/prettyPhoto.css' %}" type='text/css' media='all'/>
+<link rel='stylesheet' id='ctl-font-awesome-css' href="{%static 'ContactUs/all.min.css' %}" type='text/css'
+      media='all'/>
+<link rel='stylesheet' id='ctl-font-shims-css' href='ContactUs/v4-shims.css' type='text/css' media='all'/>
+<link rel='stylesheet' id='ctl-styles-horizontal-css' href="{% static 'ContactUs/ctl-styles-horizontal.css' %}"
+      type='text/css' media='all'/>
+<style id='ctl-styles-horizontal-inline-css' type='text/css'>
+
+</style>
+<link rel='stylesheet' id='ctl-styles-slick-css' href="{% static 'ContactUs/slick.css' %}" type='text/css' media='all'/>
+<script type='text/javascript' src="{% static 'ContactUs/scripts.js'%}"></script>
+<script type='text/javascript' src="{% static 'ContactUs/flatsome-live-search.js'%}"></script>
+<script type='text/javascript' src="{% static 'ContactUs/hoverIntent.min.js'%}"></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var flatsomeVars = {"ajaxurl":"http:\/\/www.jainology.org\/wp-admin\/admin-ajax.php","rtl":"","sticky_height":"70","user":{"can_edit_pages":false}};
+/* ]]> */
+
+</script>
+<script type='text/javascript' src="{% static 'ContactUs/flatsome.js'%}"></script>
+<script type='text/javascript' src="{% static 'ContactUs/flatsome-lazy-load.js'%}"></script>
+<script type='text/javascript' src="{% static 'ContactUs/wp-embed.min.js'%}"></script>
+<script type='text/javascript' src="{% static 'ContactUs/jquery.flexslider-min.js'%}"></script>
+<script type='text/javascript' src="{% static 'ContactUs/jquery.prettyPhoto.js'%}"></script>
+<script type='text/javascript' src="{% static 'ContactUs/slick.min.js'%}"></script>
+<script type='text/javascript' src="{% static 'ContactUs/ctl_horizontal_scripts_flat.js'%}"></script>
+
+</body>
+</html>
+<!--Generated by Endurance Page Cache-->

@@ -1,0 +1,106 @@
+{% extends 'AdminDashbord/base_admin.html' %}
+{% block content %}
+{% load static from static %}
+
+<div class="card mb-4" style="margin-left:100px; margin-top:20px">
+    <div class="card-header"><i class="fas fa-table mr-1"></i>HeadInfo DataTable</div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Family Code</th>
+                    <th>Zone Name</th>
+                    <th>Native City</th>
+                    <th>Mosad City</th>
+                    <th>Father Name</th>
+                    <th>GrandFather Name</th>
+                    <th>Mother Name</th>
+                    <th>HeadPerson Of Family</th>
+                    <th>Phone No Office</th>
+                    <th>Phone No Home</th>
+                    <th>Email</th>
+                    <th>Date</th>
+                    <th>Head Image</th>
+                    <th>Address</th>
+                    <th>Town</th>
+                    <th>Taluko</th>
+                    <th>District</th>
+                    <th>City PinCode</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for head in Head %}
+                <tr>
+                    <td>{{ head.id }}</td>
+                    <td>{{ head.F_Code }}</td>
+                    <td>{{ head.Zone_Name }}</td>
+                    <td>{{ head.Native_City }}</td>
+                    <td>{{ head.Mosad_City }}</td>
+                    <td>{{ head.Father_Name }}</td>
+                    <td>{{ head.GrandFather_Name }}</td>
+                    <td>{{ head.Mother_Name }}</td>
+                    <td>{{ head.HeadPerson_Of_Family }}</td>
+                    <td>{{ head.Phone_NO_Office }}</td>
+                    <td>{{ head.Phone_NO_Home }}</td>
+                    <td>{{ head.Email }}</td>
+                    <td>{{ head.Date }}</td>
+                    <td><img src="/media/{{ head.profile_image }}" style="height: 80px;"></td>
+                    <td>{{ head.Address }}</td>
+                    <td>{{ head.Town }}</td>
+                    <td>{{ head.Taluko }}</td>
+                    <td>{{ head.District }}</td>
+                    <td>{{ head.CITY_PINCODE }}</td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                <tr>
+                    <th>Member Id</th>
+                    <th>Member Name</th>
+                    <th>Member Family Code</th>
+                    <th>Member Relation to Head</th>
+                    <th>Birth Date</th>
+                    <th>Study</th>
+                    <th>Profession</th>
+                    <th>Marital Status</th>
+                    <th>Blood Group</th>
+                    <th>Phone No</th>
+                    <th>Gender</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for head in Head %}
+                {% for member in member %}
+                {% if member.M_F_Code == head.F_Code %}
+                <tr>
+                    <td>{{ member.id }}</td>
+                    <td>{{member.M_Name }}</td>
+                    <td>{{ member.M_F_Code }}</td>
+                    <td>{{ member.M_Relation_To_Head }}</td>
+                    <td>{{ member.M_BOD }}</td>
+                    <td>{{ member.M_Study_Qualifications }}</td>
+                    <td>{{ member.M_Profession }}</td>
+                    <td>{{ member.M_Marital_Status }}</td>
+                    <td>{{ member.M_Blood_Group }}</td>
+                    <td>{{ member.M_Phone_NO }}</td>
+                    <td>{{ member.M_Sex }}</td>
+                    <td><a href="/DeleteMemberData/{{member.id}}" class="btn btn-danger">Delete</a></td>
+                </tr>
+                {% endif %}
+                {% endfor %}
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</div>
+
+{% endblock %}

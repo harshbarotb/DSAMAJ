@@ -1,0 +1,111 @@
+{% extends 'AdminDashbord/base_admin.html' %}
+{% block content %}
+{% load static from static %}
+<!-- Main content -->
+<section class="content" style="margin-left:100px;">
+    <div class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+            <div class="col-lg-3 col-6" style="align:center;">
+                <!-- small box -->
+                <div class="small-box bg-info">
+                    <div class="inner">
+                        <h3>{{ FeMale_Count }}</h3>
+
+                        <p>No Of FeMale Members</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-person-add"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- ./col -->
+            <!-- ./col -->
+            <div class="col-lg-3 col-6">
+                <!-- small box -->
+                <div class="small-box bg-warning">
+                    <div class="inner">
+                        <h3>{{ Count_Family }}</h3>
+
+                        <p>No Of Family Connected </p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-person-add"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-3 col-6">
+                <!-- small box -->
+                <div class="small-box bg-danger">
+                    <div class="inner">
+                        <h3>{{ Count_Male }}</h3>
+
+                        <p>No Of Male Members</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-person-add"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- ./col -->
+        </div>
+        <!-- /.row -->
+        <!-- Main row -->
+        <div class="row">
+             <div class="col">
+                 <div class="card card-body">
+                     <form method="get">
+                          {{ myFilter.form}}
+                         <button class="btn btn-primary" type="submit"> Search</button>
+                     </form>
+                 </div>
+             </div>
+         </div>
+        <div class="card mb-4">
+            <div class="card-header"><i class="fas fa-table mr-1"></i>HeadInfo DataTable</div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Zone Name</th>
+                            <th>Native City</th>
+                            <th>Email Id</th>
+                            <th>Town</th>
+                            <th>Phone_NO_Home</th>
+                            <th>F_Code</th>
+                        </tr>
+                        </thead>
+                        <tfoot>
+                        <tr>
+                            <th>Name</th>
+                            <th>Zone Name</th>
+                            <th>Native City</th>
+                            <th>Email Id</th>
+                            <th>Town</th>
+                            <th>Phone_NO_Home</th>
+                            <th>F_Code</th>
+                        </tr>
+                        </tfoot>
+                        <tbody>
+                        {% for i in HeadPerson %}
+                        <tr>
+                            <td>{{ i.HeadPerson_Of_Family }}</td>
+                            <td>{{ i.Zone_Name }}</td>
+                            <td>{{ i.Native_City }}</td>
+                            <td>{{ i.Email }}</td>
+                            <td>{{ i.Town }}</td>
+                            <td>{{ i.Phone_NO_Home }}</td>
+                            <td>{{ i.F_Code }}</td>
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

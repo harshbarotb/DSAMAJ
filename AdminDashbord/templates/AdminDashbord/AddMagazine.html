@@ -1,0 +1,26 @@
+{% extends 'AdminDashbord/base_admin.html' %}
+{% block content %}
+{% load static from static %}
+
+<form style="margin-left:100px; margin-top:20px" action="/SaveMagazineData/" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Magazine Cover Title :</label>
+           <input type="text" class="form-control mb-2 mr-sm-2" name="Magazine_Cover_Title" placeholder="">
+        </div>
+    </div>
+     <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Magazine Link :</label>
+        <input type="text" class="form-control mb-2 mr-sm-2" name="Magazine_Link" placeholder="">
+        </div>
+    </div>
+    <div class="form-group  col-md-5">
+        <label class="custom-file-label">Magazine Cover Page</label>
+        <input type="file" class="custom-file-input" name="Magazine_Cover_Page" required>
+    </div>
+    <button type="submit" class="btn btn-primary mb-2">Submit</button>
+</form>
+
+{% endblock content %}

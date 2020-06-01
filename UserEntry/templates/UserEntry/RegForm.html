@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Registration Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+</head>
+<body>
+<div style=" margin-left: 30px">    
+   <br> <br> 
+   <h2> + Family Code Regestration + </h2>
+<form action="/AddFCode/" method="POST">
+    {% csrf_token %}
+  <div class="form-row align-items-center">
+    <div class="col-sm-3 my-1">
+      <input type="text" class="form-control" name="Fcode" id="inlineFormInputName" placeholder="Family Code">
+    </div>
+    <div class="col-auto my-1">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
+</form>
+</div>
+<br>
+<br>
+<br>    
+<h2 style=" margin-left: 30px">+ Family Registration + </h2>
+<form action="/FormReg/" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="form-row " style="align : center; margin-left: 30px;">
+        <div class="col-md-2 mb-2">
+            <label for="validationDefault01">ઝોનનું નામ</label>
+            <input type="text" class="form-control" id="validationDefault01" name="zone" required>
+        </div>
+        <div class="col-md-2 mb-3">
+            <label for="validationDefault02">મૂળ વતન</label>
+            <input type="text" class="form-control" name="native_city" id="validationDefault02" required>
+        </div>
+        <div class="col-md-2 mb-3">
+            <label for="validationDefault07">મોસાળ</label>
+            <input type="text" name="mosaad" class="form-control" id="validationDefault07" required>
+        </div>
+        <div class="custom-file col-md-4 mb-2" style="margin-top: 32px;">
+            <label>પરિવારના મુખ્ય વ્યક્તિનો ફોટો</label>
+            <label class="custom-file-label" for="validatedCustomFile">મુખ્ય સભ્યનો ફોટો</label>
+            <input type="file" class="custom-file-input" name="profile_image" id="validatedCustomFile" required>
+            <div class="invalid-feedback">Example invalid custom file feedback</div>
+        </div>
+    </div>
+    <div class="custom-file col-md-4 mb-2" style="align : center; margin-left: 30px;">
+                    <label class="control-label"> ફેમિલી કોડ: </label>
+                    <select name="Fcode" class="form-control course">
+                        {% for familycode in familycodes %}
+                            <option value="{{ familycode.id }}">{{ familycode.F_Code }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+    <div class="form-row" style="align : center; margin-left: 30px; margin-top:10px;">
+        <div class="col-md-5 mb-3">
+            <label for="validationDefault10">પરિવારના મુખ્ય વ્યક્તિનું નામ</label>
+            <input type="text" class="form-control" name="head_name" id="validationDefault10" required>
+        </div>
+    </div>
+    <div class="form-row" style="align : center; margin-left: 30px;">
+        <div class="col-md-5 mb-3">
+            <label for="validationDefault11">પિતાનું નામ</label>
+            <input type="text" class="form-control" name="father"
+                   id="validationDefault11" required>
+        </div>
+        <div class="col-md-4 mb-3">
+            <label for="validationDefault12">માતાનું નામ</label>
+            <input type="text" name="mother" class="form-control" id="validationDefault12" required>
+        </div>
+    </div>
+    <div class="form-row" style="align : center; margin-left: 30px;">
+        <div class="col-md-5 mb-3">
+            <label for="validationDefault13">દાદાનું નામ</label>
+            <input type="text" name="grandfather" class="form-control" id="validationDefault13" required>
+        </div>
+    </div>
+    <div class="mb-2" style="align : center; margin-left: 30px;">
+        <label for="validationTextarea">સરનામું</label>
+        <textarea name="address" class="form-control is-invalid" id="validationTextarea" placeholder="સરનામું અહી લખો"
+                  required></textarea>
+    </div>
+    <div class="form-row" style="align : center; margin-left: 30px;">
+        <div class="col">
+            <label>ગામ</label>
+            <input type="text" name="town_name" class="form-control" placeholder="ગામ">
+        </div>
+        <div class="col">
+            <label>તાલુકો</label>
+            <input type="text" name="taluko" class="form-control" placeholder="તાલુકો">
+        </div>
+        <div class="col">
+            <label>જીલ્લો</label>
+            <input type="text" name="district" class="form-control" placeholder="જીલ્લો">
+        </div>
+        <div class="col">
+            <label>પીનકોડ નંબર</label>
+            <input type="text" name="pincode" class="form-control" placeholder="પીનકોડ નંબર">
+        </div>
+    </div>
+    <br>
+    <div class="form-row" style="align : center; margin-left: 30px;">
+        <div class="form-group col-md-4">
+            <label for="inputphone02">ફોન નંબર(ઓફિસ)</label>
+            <input type="text" name="phone_office" class="form-control" id="inputphone02">
+        </div>
+        <div class="form-group col-md-4">
+            <label for="inputphone01">ફોન નંબર(ઘર)</label>
+            <input type="text" name="phone_home" class="form-control" id="inputphone01">
+        </div>
+        <div class="form-group col-md-4">
+            <label for="inputEmail4">ઈ-મેઈલ</label>
+            <input type="email" name="email" class="form-control" id="inputEmail4">
+        </div>
+    </div>
+    <br>
+    <div class="col-12">
+        <div class="table-responsive">
+            <table class="table" border="3px" id="item_table">
+
+                <thead>
+                <tr>
+                    <th>ફેમિલી કોડ</th>
+                    <th>કુટુંબના સભ્યોના નામ</th>
+                    <th>મુખ્ય વ્યક્તિ સાથેનો સંબંધ</th>
+                    <th>જન્મતારીખ</th>
+                    <th>અભ્યાસ</th>
+                    <th>વ્યવસાય</th>
+                    <th>વૈવાહિક સ્થિતી</th>
+                    <th>બ્લડ ગ્રુપ</th>
+                    <th>મોબાઈલ નંબર</th>
+                    <th>સ્ત્રી/પુરુષ</th>
+                    <th>
+                        <button type="button" name="add" class="btn btn-success btn-xs add">+<span
+                                class="glyphicon glyphicon-plus"></span></button>
+                    </th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    <button class="btn btn-primary" type="submit" style="align : center; margin-left: 30px;">Submit form</button>
+</form>
+</body>
+</html>
+<script>        
+ $(document).ready(function(){
+      
+      var count = 0;
+
+      $(document).on('click', '.add', function(){
+        count++;
+        var html = '';
+        html += '<tr>';
+        html += '<td><select name="F_Code[]" class="form-control ">{% for familycode in familycodes %}<option value="{{ familycode.id }}">{{ familycode.F_Code }}</option>{% endfor %}</select></td>';
+        html += '<td><input type="text" name="M_Name[]"class="form-control"  required></td>';
+        html += '<td><input type="text" name="M_Relation_To_Head[]"class="form-control"  required></td>';
+        html += '<td><input type="date" name="M_BOD[]"class="form-control"  required></td>';
+        html += '<td><input type="text"name="M_Study_Qualifications[]"class="form-control"required></td>';
+        html += '<td><input type="text" name="M_Profession[]"class="form-control"required></td>';
+        html += '<td><select name="M_Marital_Status[]" class="form-control"><option value="UnMarried">UnMarried</option><option value="Married">Married</option></select></td>';
+        html += '<td><input type="text" name="M_Blood_Group[]"class="form-control"required></td>';
+        html += '<td><input type="text" name="M_Phone_NO[]"class="form-control"  required></td>';
+        html += '<td><select name="M_Sex[]" class="form-control"><option value="Male">Male</option><option value="FeMale">FeMale</option></select></td>';
+        html += '<td><button type="button" name="remove" class="btn btn-danger btn-xs remove">-<span class="glyphicon glyphicon-minus"></span></button></td>';
+        $('tbody').append(html);
+      });
+
+      $(document).on('click', '.remove', function(){
+        $(this).closest('tr').remove();
+      });
+});
+
+</script>

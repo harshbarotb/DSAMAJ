@@ -1,0 +1,118 @@
+{% extends 'WatchUser_EntryUser/base.html' %}
+{% block content %}
+{% load static from static %}
+<style>
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+</style>
+<br>
+<div class="row">
+    <div class="col-md">
+        <div class="card card-body">
+            <h5> Number Of Family</h5>
+            <hr>
+            <h1 style="text-align: center; padding: 18px"> {{ Count_Family }}</h1>
+        </div>
+    </div>
+     <div class="col-md">
+        <div class="card card-body">
+            <h5> Number Of Male</h5>
+            <hr>
+            <h1 style="text-align: center; padding: 18px"> {{ Count_Male }}</h1>
+        </div>
+    </div>
+     <div class="col-md">
+        <div class="card card-body">
+            <h5> Number Of FeMale</h5>
+            <hr>
+            <h1 style="text-align: center; padding: 18px"> {{ FeMale_Count }}</h1>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="container">
+<div>
+<div class="row">
+    <div class="col-md">
+        <div class="card card-body">
+            <h5> Member's List With Information </h5>
+        </div>
+         <div class="row">
+             <div class="col">
+                 <div class="card card-body">
+                     <form method="get">
+                          {{ myFilter.form}}
+                         <button class="btn btn-primary" type="submit"> Search</button>
+                     </form>
+
+                 </div>
+
+             </div>
+
+         </div>
+         {% if HeadPerson %}
+         <div class="card card-body" style="overflow-x:auto;">
+             {% if HeadPerson %}
+             <table class="table">
+                 <tr>
+                     <th>
+                         Name
+                     </th>
+                     <th>
+                         Zone Name
+                     </th>
+
+                     <th>
+                         Family Code
+                     </th>
+                     <th>
+                         Current City Living
+                     </th>
+                      <th>
+                         Native City
+                     </th>
+                      <th>
+                         Email Id
+                     </th>
+                 </tr>
+
+                 {% for i in HeadPerson %}
+                   <tr>
+                      <td>{{ i.HeadPerson_Of_Family }}</td>
+
+
+                      <td>{{ i.Zone_Name }}</td>
+
+
+                       <td>{{ i.Family_Code }}</td>
+
+                       <td>{{ i.CURRENT_CITY }}</td>
+
+                      <td>{{ i.Native_City }}</td>
+
+                      <td>{{ i.Email }}</td>
+                   </tr>
+                 {% endfor %}
+
+             </table>
+             {% endif %}
+         </div>
+        {% else %}
+              <h1 style="color: red ">  Sorry, No Result Found </h1>
+        {% endif %}
+    </div>
+</div>
+</div>
+</div>
+{% endblock content %}

@@ -1,0 +1,45 @@
+{% extends 'AdminDashbord/base_admin.html' %}
+{% block content %}
+{% load static from static %}
+<div class="card mb-4" style="margin-left:100px; margin-top:20px">
+    <div class="card-header"><i class="fas fa-table mr-1"></i>FemaleInfo DataTable</div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                <tr>
+                    <th>Member Id</th>
+                    <th>Member Name</th>
+                    <th>Member Family Code</th>
+                    <th>Member Relation to Head</th>
+                    <th>Birth Date</th>
+                    <th>Study</th>
+                    <th>Profession</th>
+                    <th>Marital Status</th>
+                    <th>Blood Group</th>
+                    <th>Phone No</th>
+                    <th>Gender</th>
+                </tr>
+                </thead>
+                {% for member in members %}
+                {% if member.age >= 18 %}
+                <tr>
+                    <td>{{ member.model.id }}</td>
+                    <td>{{ member.model.M_Name }}</td>
+                    <td>{{ member.model.M_F_Code }}</td>
+                    <td>{{ member.model.M_Relation_To_Head }}</td>
+                    <td>{{ member.model.M_BOD }}</td>
+                    <td>{{ member.model.M_Study_Qualifications }}</td>
+                    <td>{{ member.model.M_Profession }}</td>
+                    <td>{{ member.model.M_Marital_Status }}</td>
+                    <td>{{ member.model.M_Blood_Group }}</td>
+                    <td>{{ member.model.M_Phone_NO }}</td>
+                    <td>{{ member.model.M_Sex }}</td>
+                </tr>
+                {% endif %}
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

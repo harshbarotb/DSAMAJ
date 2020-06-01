@@ -1,0 +1,73 @@
+{% extends 'AdminDashbord/base_admin.html' %}
+{% block content %}
+{% load static from static %}
+
+
+<div class="container" >
+    <div class="row" style="margin-left:300px; margin-top:20px">
+        <div class="col-lg-6 custom-block">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="bg_blue">Add FamilyMember</h2>
+                </div>
+                <div class="col-lg-12">
+                    <form action="/SubmitFamilyMember/" method="post">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label class="control-label">ફેમિલી કોડ : </label>
+                            <select name="F_Code" class="form-control ">{% for familycode in familycodes %}
+                                <option value="{{ familycode.id }}">{{ familycode.F_Code }}</option>
+                                {% endfor %}</select>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">કુટુંબના સભ્યનું નામ : </label>
+                            <input type="text" name="M_Name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">મુખ્ય વ્યક્તિ સાથેનો સંબંધ: </label>
+                            <input type="text" name="M_Relation_To_Head" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">જન્મતારીખ : </label>
+                            <input type="date" name="M_BOD" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">અભ્યાસ : </label>
+                            <input type="text" name="M_Study_Qualifications" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">વ્યવસાય : </label>
+                            <input type="text" name="M_Profession" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">વૈવાહિક સ્થિતી : </label>
+                            <select name="M_Marital_Status" class="form-control">
+                                <option value="UnMarried">UnMarried</option>
+                                <option value="Married">Married</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">બ્લડ ગ્રુપ : </label>
+                            <input type="text" name="M_Blood_Group" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">મોબાઈલ નંબર : </label>
+                            <input type="text" name="M_Phone_NO" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">સ્ત્રી/પુરુષ : </label>
+                            <select name="M_Sex" class="form-control">
+                                <option value="Male">Male</option>
+                                <option value="FeMale">FeMale</option>
+                            </select>
+                        </div>
+                   <div class="form-group">
+                    <input type="submit" name="submit" class="btn btn-block btn-success" value="Submit">
+                </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

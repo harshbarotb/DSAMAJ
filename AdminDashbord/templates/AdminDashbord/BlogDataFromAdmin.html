@@ -1,0 +1,43 @@
+{% extends 'AdminDashbord/base_admin.html' %}
+{% block content %}
+{% load static from static %}
+<form style="margin-left:100px; margin-top:20px" action="/BlogHomePageDataSave/" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>BlogId :</label>
+            <input type="text" class="form-control mb-2 mr-sm-2" name="BlogId" placeholder="">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>NewsTitle :</label>
+            <input type="text" class="form-control mb-2 mr-sm-2" name="NewsTitle" placeholder="">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>NewsDate :</label>
+            <input type="date" class="form-control mb-2 mr-sm-2" name="NewsDate" placeholder="">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>NewsThumbnailTitleNews :</label>
+            <input type="text" class="form-control mb-2 mr-sm-2" name="NewsThumbnailTitleNews" placeholder="">
+        </div>
+    </div>
+        <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>NewsBlogNews :</label>
+            <input type="text" class="form-control mb-2 mr-sm-2" name="NewsBlogNews" placeholder="">
+        </div>
+    </div>
+    <div class="form-group  col-md-5">
+        <label class="custom-file-label">NewsImages</label>
+        <input type="file" class="custom-file-input" name="NewsImages" required>
+    </div>
+    <button type="submit" class="btn btn-primary mb-2">Submit</button>
+</form>
+
+{% endblock %}
