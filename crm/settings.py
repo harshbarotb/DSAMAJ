@@ -24,7 +24,8 @@ SECRET_KEY = 'g9#db_^&1co-k%w8vdgfjw(!juda=i&6ad#)b*%^gqzi-n1o&j'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['doshisamaj.herokuapp.com','http://127.0.0.1:8000/']
+
 
 # Application definition
 
