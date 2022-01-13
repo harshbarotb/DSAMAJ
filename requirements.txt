@@ -109,7 +109,7 @@ numpy==1.18.2
 pandocfilters==1.4.2
 parso==0.6.2
 pickleshare==0.7.5
-Pillow==7.1.1
+Pillow==9.0.0
 pipenv==2020.5.28
 post==2019.4.13
 prometheus-client==0.7.1
